@@ -9,6 +9,27 @@ nav { display: flex; align-items: center; }
 nav a { margin-left: 20px; text-decoration: none; color: #555; font-weight: 500; transition: 0.3s; }
 nav a:hover { color: #2563eb; }
 
+/* Ikon Sosial Media di Header & Footer */
+.header-socials { display: flex; align-items: center; gap: 12px; margin-left: 20px; }
+
+.social-icon {
+    font-size: 20px;
+    text-decoration: none;
+    transition: transform 0.2s ease, color 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.social-icon:hover { transform: scale(1.15); }
+
+/* Warna Brand Instagram & TikTok */
+.social-icon.instagram { color: #e1306c; }
+.social-icon.tiktok { color: #000000; }
+
+.social-icon.instagram:hover { color: #c13584; }
+.social-icon.tiktok:hover { color: #25f4ee; }
+
 /* Tombol Keranjang Navbar */
 .cart-icon-btn {
     background-color: #2563eb;
@@ -18,7 +39,7 @@ nav a:hover { color: #2563eb; }
     border-radius: 20px;
     font-weight: bold;
     cursor: pointer;
-    margin-left: 20px;
+    margin-left: 15px;
     transition: 0.3s;
     font-size: 14px;
 }
@@ -131,4 +152,7 @@ nav a:hover { color: #2563eb; }
 .btn-map-direct { display: block; text-align: center; background: #2563eb; color: white; text-decoration: none; padding: 12px; font-size: 14px; font-weight: bold; transition: 0.3s; }
 .btn-map-direct:hover { background: #1d4ed8; }
 
-footer { padding: 25px; text-align: center; background: #ffffff; color: #64748b; font-size: 14px; border-top: 1px solid #e2e8f0; margin-top: 40px; }
+/* Footer Styling */
+footer { padding: 30px 20px; text-align: center; background: #ffffff; color: #64748b; font-size: 14px; border-top: 1px solid #e2e8f0; margin-top: 40px; }
+.footer-socials { display: flex; justify-content: center; gap: 25px; margin-bottom: 15px; }
+.footer-socials .social-icon { font-weight: 600; font-size: 15px; }
