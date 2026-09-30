@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FloristBouquet - Toko Buket & Hadiah Custom</title>
+    <!-- Menghubungkan ke file CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header Navigation -->
+    <header>
+        <a href="#" class="logo">FloristBouquet</a>
+        <nav>
+            <a href="#beranda">Beranda</a>
+            <a href="#kategori">Kategori</a>
+            <a href="#produk">Produk Terlaris</a>
+            <a href="#tentang">Tentang Toko</a>
+            <a href="#kontak">Kontak</a>
+            <!-- Tombol Keranjang Belanja -->
+            <button class="cart-icon-btn" onclick="bukaKeranjang()">
+                🛒 Keranjang <span id="cart-count">0</span>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="beranda">
+        <div class="hero-text">
+            <h1>Toko Buket Terbaik<br>Indah & Elegan</h1>
+            <p>Nikmati berbagai pilihan buket bunga segar, buket snack, dan uang untuk momen spesial. Pesan online dengan mudah, cepat, dan kustomisasi sesuai keinginan.</p>
+            <a href="#produk" class="btn-primary">Lihat Produk</a>
+        </div>
+        <div class="hero-img">
+            <img src="https://images.unsplash.com/photo-1563241527-3004b7be0ffd?w=500" alt="Buket Bunga">
+        </div>
+    </section>
+
+    <!-- Kategori Section -->
+    <section class="section" id="kategori">
+        <h2 class="section-title">Kategori Buket</h2>
+        <div class="category-grid">
+            <a href="#produk" class="category-card">🌹 Buket Bunga</a>
+            <a href="#produk" class="category-card">🍫 Buket Snack</a>
+            <a href="#produk" class="category-card">💵 Buket Uang</a>
+            <a href="#produk" class="category-card">🎓 Buket Wisuda</a>
+        </div>
+    </section>
+
+    <!-- Produk Terlaris -->
+    <section class="section" id="produk">
+        <h2 class="section-title">Produk Terlaris</h2>
+        <div class="product-grid">
+            
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1582794543139-8ac9cb0f7b11?w=400" alt="Buket Mawar Red">
+                <h3>Red Velvet Rose</h3>
+                <p>Buket mawar merah segar pilihan dengan balutan wrapping pastel premium.</p>
+                <span class="price">Rp 85.000</span>
+                <div class="btn-group">
+                    <button type="button" onclick="tambahKeKeranjang('Red Velvet Rose', 85000)" class="btn-cart-add">+ Keranjang</button>
+                    <button onclick="bukaForm('Red Velvet Rose')" class="btn-card">Pesan Langsung</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1526047932273-341f2a7631f9?w=400" alt="Buket Snack">
+                <h3>Chocolate Delight</h3>
+                <p>Kombinasi snack cokelat populer, cocok untuk hadiah ulang tahun sahabat.</p>
+                <span class="price">Rp 75.000</span>
+                <div class="btn-group">
+                    <button type="button" onclick="tambahKeKeranjang('Chocolate Delight', 75000)" class="btn-cart-add">+ Keranjang</button>
+                    <button onclick="bukaForm('Chocolate Delight')" class="btn-card">Pesan Langsung</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1513151233558-d860c5398176?w=400" alt="Buket Dried Flower">
+                <h3>Rustic Dried Flower</h3>
+                <p>Bunga kering estetis yang tahan lama dan elegan untuk kenang-kenangan.</p>
+                <span class="price">Rp 95.000</span>
+                <div class="btn-group">
+                    <button type="button" onclick="tambahKeKeranjang('Rustic Dried Flower', 95000)" class="btn-cart-add">+ Keranjang</button>
+                    <button onclick="bukaForm('Rustic Dried Flower')" class="btn-card">Pesan Langsung</button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Tentang Toko -->
+    <section class="section" id="tentang" style="background: #fff;">
+        <h2 class="section-title">Tentang FloristBouquet</h2>
+        <p style="max-width: 700px; margin: 0 auto; line-height: 1.8; color: #555;">
+            FloristBouquet adalah toko buket tangan modern yang menyediakan rangkaian buket kustom bermutu tinggi. Kami berfokus pada detail estetika, kesegaran bahan, dan kepuasan pelanggan untuk melengkapi momen berharga Anda.
+        </p>
+    </section>
+
+    <!-- Kontak & Lokasi -->
+    <section class="section" id="kontak">
+        <h2 class="section-title">Kontak & Lokasi</h2>
+        <div class="contact-box">
+            <!-- Informasi Kontak -->
+            <div class="contact-info">
+                <h3>Jam Operasional</h3>
+                <p>Senin - Sabtu: 08.00 - 20.00 WIB</p>
+                <p>Minggu: 09.00 - 17.00 WIB</p>
+                <br>
+                <h3>Pesan Custom via WhatsApp</h3>
+                <p>Diskusi pilihan warna pita, desain khusus, hingga pengisian kartu ucapan gratis.</p>
+                <a href="https://wa.me/6289603178165?text=Halo,%20saya%20mau%20konsultasi%20pemesanan%20buket%20custom" class="btn-wa" target="_blank">Chat WhatsApp Sekarang</a>
+            </div>
+
+            <!-- Embed Google Maps + Tombol Klik Titik Lokasi Akurat -->
+            <div class="map-container">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3952.951336496924!2d112.0116!3d-7.8159!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zN8KwNDgnNTcuMiJTIDExMsKwMDAnNDEuOCJF!5e0!3m2!1sid!2sid!4v1690000000000!5m2!1sid!2sid" 
+                    width="100%" 
+                    height="260" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+
+                <a href="https://maps.app.goo.gl/Dq1UGz5ZCervHofc7" target="_blank" class="btn-map-direct">
+                    📍 Buka Titik Lokasi Presisi di Google Maps
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 FloristBouquet. All Rights Reserved.</p>
+    </footer>
+
+    <!-- Modal Pop-up Form Pemesanan Langsung (Lama) -->
+    <div id="orderModal" class="modal-overlay">
+        <div class="modal-box">
+            <h3>Form Pemesanan Buket</h3>
+            
+            <label>Nama Pemesan:</label>
+            <input type="text" id="nama" placeholder="Nama kamu">
+
+            <label>Warna Pita / Wrapping:</label>
+            <input type="text" id="warna" placeholder="Contoh: Pink Pastel">
+
+            <label>Isi Kartu Ucapan:</label>
+            <textarea id="ucapan" placeholder="Tulis ucapan di sini..."></textarea>
+
+            <button onclick="kirimKeWA()" class="btn-submit">Kirim Pesanan via WA</button>
+            <button onclick="tutupModal()" class="btn-cancel">Batal</button>
+        </div>
+    </div>
+
+    <!-- Modal Pop-up Keranjang Belanja (Baru) -->
+    <div id="cartModal" class="modal-overlay">
+        <div class="modal-box">
+            <h3>🛒 Keranjang Belanja</h3>
+            <div id="cart-items"></div>
+            <div class="cart-total-container">
+                <strong>Total Bayar: </strong><span id="cart-total" style="color: #2563eb; font-weight: bold;">Rp 0</span>
+            </div>
+
+            <hr style="margin: 15px 0; border: 0; border-top: 1px solid #eee;">
+
+            <label>Nama Pemesan:</label>
+            <input type="text" id="nama-cart" placeholder="Nama kamu">
+            <label>Catatan / Request Khusus:</label>
+            <textarea id="catatan-cart" placeholder="Contoh: Request warna pita pastel, ucapan HBD..."></textarea>
+
+            <button type="button" onclick="checkoutKeranjangWA()" class="btn-submit">Checkout & Kirim ke WA</button>
+            <button type="button" onclick="tutupKeranjang()" class="btn-cancel">Tutup</button>
+        </div>
+    </div>
+
+    <!-- Menghubungkan ke file JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
