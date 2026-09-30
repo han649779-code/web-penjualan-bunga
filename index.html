@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FloristBouquet - Toko Buket & Hadiah Custom</title>
-    <!-- Menghubungkan ke file CSS -->
+    <!-- Menghubungkan ke file CSS sejajar -->
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -113,10 +113,10 @@
                 <a href="https://wa.me/6289603178165?text=Halo,%20saya%20mau%20konsultasi%20pemesanan%20buket%20custom" class="btn-wa" target="_blank">Chat WhatsApp Sekarang</a>
             </div>
 
-            <!-- Embed Google Maps + Tombol Klik Titik Lokasi Akurat -->
+            <!-- Embed Google Maps -->
             <div class="map-container">
                 <iframe 
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3952.951336496924!2d112.0116!3d-7.8159!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zN8KwNDgnNTcuMiJTIDExMsKwMDAnNDEuOCJF!5e0!3m2!1sid!2sid!4v1690000000000!5m2!1sid!2sid" 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3952.951336496924!2d112.0116!3d-7.8159!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zN8KwNDgnNTcuMiJTIDExMsKwMDAnNDMuOCJF!5e0!3m2!1sid!2sid!4v1690000000000!5m2!1sid!2sid" 
                     width="100%" 
                     height="260" 
                     style="border:0;" 
@@ -136,7 +136,7 @@
         <p>&copy; 2026 FloristBouquet. All Rights Reserved.</p>
     </footer>
 
-    <!-- Modal Pop-up Form Pemesanan Langsung (Lama) -->
+    <!-- Modal Pop-up Form Pemesanan Langsung -->
     <div id="orderModal" class="modal-overlay">
         <div class="modal-box">
             <h3>Form Pemesanan Buket</h3>
@@ -155,9 +155,9 @@
         </div>
     </div>
 
-    <!-- Modal Pop-up Keranjang Belanja (Baru) -->
+    <!-- Modal Pop-up Keranjang Belanja dengan Edit Kuantitas -->
     <div id="cartModal" class="modal-overlay">
-        <div class="modal-box">
+        <div class="modal-box modal-cart-wide">
             <h3>🛒 Keranjang Belanja</h3>
             <div id="cart-items"></div>
             <div class="cart-total-container">
@@ -176,7 +176,7 @@
         </div>
     </div>
 
-    <!-- Menghubungkan ke file JavaScript -->
+    <!-- Menghubungkan ke file JavaScript sejajar -->
     <script src="script.js"></script>
 </body>
 </html>
